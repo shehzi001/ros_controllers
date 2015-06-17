@@ -128,7 +128,7 @@ inline bool isTimeStrictlyIncreasing(const trajectory_msgs::JointTrajectory& msg
   {
     const ros::Duration& t1 = it->time_from_start;
     const ros::Duration& t2 = (++it)->time_from_start;
-    if (t1 >= t2) {return false;}
+    if (t1 > t2) {return false;}
   }
   return true;
 }
